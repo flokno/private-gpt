@@ -67,7 +67,7 @@ rag:
     top_n: 1
 
 summarize:
-  use_async: true
+  use_async: false
 
 clickhouse:
     host: localhost

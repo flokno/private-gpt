@@ -4,17 +4,21 @@ server:
 llm:
   mode: ollama
   max_new_tokens: 512  # 512
-  context_window: 4000  # 3900
+  context_window: 3900  # 3900
   temperature: 0.1     #The temperature of the model. Increasing the temperature will make the model answer more creatively. A value of 0.1 would be more factual. (Default: 0.1)
 
 embedding:
   mode: ollama
 
 ollama:
-  # llm_model: llama3.1:8b
+  # llm_model: llama3.2:1b
   # llm_model: llama3.2
-  # llm_model: llama3.3
-  llm_model: phi4
+  # llm_model: mistral
+  # llm_model: phi4
+  llm_model: llama3.3
+  # llm_model: deepseek-r1:70b
+  # llm_model: deepseek-r1:32b
+  # llm_model: deepseek-r1:1.5b
   embedding_model: nomic-embed-text
   api_base: http://localhost:31415
   embedding_api_base: http://localhost:31415  # change if your embedding model runs on another ollama
@@ -24,7 +28,7 @@ ollama:
   top_p: 0.9              # Works together with top-k. A higher value (e.g., 0.95) will lead to more diverse text, while a lower value (e.g., 0.5) will generate more focused and conservative text. (Default: 0.9)
   repeat_last_n: 64       # Sets how far back for the model to look back to prevent repetition. (Default: 64, 0 = disabled, -1 = num_ctx)
   repeat_penalty: 1.2     # Sets how strongly to penalize repetitions. A higher value (e.g., 1.5) will penalize repetitions more strongly, while a lower value (e.g., 0.9) will be more lenient. (Default: 1.1)
-  request_timeout: 120.0  # Time elapsed until ollama times out the request. Default is 120s. Format is float.
+  request_timeout: 300.0  # Time elapsed until ollama times out the request. Default is 120s. Format is float.
 
 vectorstore:
   database: qdrant
