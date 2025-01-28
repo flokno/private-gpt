@@ -11,11 +11,17 @@ embedding:
   mode: ollama
 
 ollama:
+  ## for Coding:
+  # llm_model: codestral
+  llm_model: deepseek-coder-v2
+  # llm_model: mistral-large
+  # llm_model: deepseek-coder:33b
+  ## for RAG:
   # llm_model: llama3.2:1b
   # llm_model: llama3.2
   # llm_model: mistral
   # llm_model: phi4
-  llm_model: llama3.3
+  # llm_model: llama3.3
   # llm_model: deepseek-r1:70b
   # llm_model: deepseek-r1:32b
   # llm_model: deepseek-r1:1.5b
