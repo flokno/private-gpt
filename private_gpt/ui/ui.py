@@ -40,13 +40,13 @@ SOURCES_SEPARATOR = "<hr>Sources: \n"
 class Modes(str, Enum):
     RAG_MODE = "RAG"
     SEARCH_MODE = "Search"
-    BASIC_CHAT_MODE = "Basic"
-    SUMMARIZE_MODE = "Summarize"
+    BASIC_CHAT_MODE = "Create"
+    SUMMARIZE_MODE = "Adapt"
 
 
 MODES: list[Modes] = [
-    Modes.RAG_MODE,
-    Modes.SEARCH_MODE,
+    # Modes.RAG_MODE,
+    # Modes.SEARCH_MODE,
     Modes.BASIC_CHAT_MODE,
     Modes.SUMMARIZE_MODE,
 ]
@@ -261,9 +261,9 @@ class PrivateGptUi:
             case Modes.SEARCH_MODE:
                 return "Find relevant chunks of text in selected files."
             case Modes.BASIC_CHAT_MODE:
-                return "Chat with the LLM using its training data. Files are ignored."
+                return "Use chatbot to create bot."
             case Modes.SUMMARIZE_MODE:
-                return "Generate a summary of the selected files. Prompt to customize the result."
+                return "Use chatbot to adapt the code in the ingested files."
             case _:
                 return ""
 

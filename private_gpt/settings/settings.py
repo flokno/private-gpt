@@ -357,8 +357,8 @@ class AzureOpenAISettings(BaseModel):
 class UISettings(BaseModel):
     enabled: bool
     path: str
-    default_mode: Literal["RAG", "Search", "Basic", "Summarize"] = Field(
-        "RAG",
+    default_mode: Literal["Create", "Adapt"] = Field(
+        "Create",
         description="The default mode.",
     )
     default_chat_system_prompt: str = Field(
