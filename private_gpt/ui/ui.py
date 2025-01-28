@@ -229,6 +229,7 @@ class PrivateGptUi:
                     use_context=True,
                     context_filter=context_filter,
                     instructions=message,
+                    prompt=self._system_prompt,
                 )
                 yield from yield_tokens(summary_stream)
 
