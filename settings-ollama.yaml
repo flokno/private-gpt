@@ -16,6 +16,7 @@ ollama:
   # llm_model: mistral
   # llm_model: phi4
   llm_model: llama3.3
+  # llm_model: mixtral:8x22b
   # llm_model: deepseek-r1:70b
   # llm_model: deepseek-r1:32b
   # llm_model: deepseek-r1:1.5b
